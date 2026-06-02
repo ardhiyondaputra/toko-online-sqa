@@ -33,9 +33,7 @@ class SystemTest extends TestCase
 
     $this->driver = RemoteWebDriver::create(
         $host,
-        $capabilities,
-        5000,
-        5000
+        $capabilities
     );
 }
 
