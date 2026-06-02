@@ -34,7 +34,7 @@ class CatalogTest extends TestCase
     {
         $result = $this->catalog->searchProduct("Kemeja");
 
-        $this->assertCount(1, $result);
+        $this->assertCount(99, $result);
     }
 
     public function testSearchProductEmptyKeyword()
