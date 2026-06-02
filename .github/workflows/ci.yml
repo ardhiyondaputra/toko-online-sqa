@@ -25,7 +25,9 @@ jobs:
         run: php -S localhost:8000 &
 
       - name: Start ChromeDriver in Background
-        run: chromedriver --port=9515 &
+        run: |
+          chromedriver --port=9515 &
+          sleep 5
 
       - name: Run All Automated Tests & Quality Metrics
         run: php vendor/bin/phpunit tests --coverage-text
