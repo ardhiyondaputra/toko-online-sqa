@@ -19,8 +19,10 @@ class SystemTest extends TestCase
 
     $chromeOptions = new ChromeOptions();
     $chromeOptions->addArguments([
+        '--headless=new',
         '--disable-gpu',
-        '--no-sandbox'
+        '--no-sandbox',
+        '--disable-dev-shm-usage'
     ]);
 
     $capabilities = DesiredCapabilities::chrome();
